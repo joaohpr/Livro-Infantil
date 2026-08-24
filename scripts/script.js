@@ -33,12 +33,12 @@ function falarLetra(letra) {
 
 
 function mostrarLetra(letra) {
-    // coloca a letra que foi digitada no topo da pagina
+    // Coloca a letra que foi digitada no topo da pagina
     $("#nome-letra-atual").text(letra);
 
-    // coloquei um nome padrao nas imagem, "letraA.png"
-    //ela monta o caminha da pasta
-    //depois pega o modal que vai trocar de conteudo e muda o caminho o alt dele
+    // As imagens seguem um padrão de nome, como "letraA.png".
+    // O caminho da imagem é montado com base na letra pressionada.
+    // Em seguida, atualiza a imagem do modal e seu texto alternativo (alt).
     $("#letra-imagem")
         .attr("src", "img/letras/letra" + letra + ".png")
         .attr("alt", "Letra " + letra);
@@ -56,9 +56,9 @@ function mostrarObjeto(letra) {
     //troca o caminho da pasta e coloca o alt diferente
     //mesma coisa do de mostrar letra
     const caminhoImagem = "img/objects/objeto" + letra + ".png";
-    
+
     $("#modal-image")
         .attr("src", caminhoImagem)
-        .attr("alt"," LETRA :" + letra)
+        .attr("alt", " LETRA :" + letra)
         .addClass("mostrar");
 }
